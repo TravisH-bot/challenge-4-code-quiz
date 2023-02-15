@@ -1,0 +1,27 @@
+h2 {
+  text-align: end;
+  color: black;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn-primary {
+  color: white;
+  background-color: rgb(146, 49, 146);
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+}

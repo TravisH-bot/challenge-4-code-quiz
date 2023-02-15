@@ -1,0 +1,71 @@
+//MAIN PAGE FUNCTIONALITY
+
+We want a main page with a Title, quiz description, a button to start the quiz, a link to the scores page, and the timer set to 0. 
+
+When we press the button, we want the title, quiz description, and start quiz button to disappear and the first quiz question to display. 
+
+//How do I get the initial information to disappear/be replaced by the first question? 
+-Could this be done with DOM manipulation and have each section of questions be shown or hidden based on the data-set? 
+
+//How can I go about selecting an answer, correct or incorrect, and knowing which is which? 
+-This can likely be done using an array of objects, creating an if statement that: 
+-if the correct answer is chosen; 
+  display the Correct! message on screen,
+  add to the score,
+  move to next question.
+
+-if the incorrect answer is chosen;
+  display the Incorrect! message on screen,
+  subtract from the timer,
+  move to the next question. 
+
+    //How can I get the timer to stop and display the time left if all questions are answered in time?
+    -The score appears to be the time remaining on the timer. So, this would be what we need to capture as the score for each round. 
+
+//How can I get the timer to be persistent on the screen?
+
+//How can I have the timer begin at 0 and only start the countdown on press of the star quiz button?
+-I think this can be triggered by adding an event listener to the start quiz button.
+
+
+//How do I then get the next question to appear after answering the first one?
+-First thought that comes to mind is DOM manipulation to change out the button questions rather than coding sections for each button???
+
+-or pull from the array of questions to display the information. 
+
+//How do I display a temporary message indicating a correct/incorrect message? 
+-Maybe based on an event listener attached to the quiz buttons, 
+
+//How to I tally the score from each correct answer? 
+-This can likely be achieved similarly to the R,P,S game by combining if/else statements (if true score++)
+
+//How do I remove time from the clock (10 seconds at a time) if an incorrect answer is selected? 
+-Again this can likely be achieved similarly to the R,P,S game (if false subtract time in some way? timer--?)
+
+//What elements do I need to create the end of quiz page?
+An All done! message, the total score achieved, an input form, and a submit button.
+
+//How is the end quiz page reached? 
+-This will be reached by either the user answering all the questions or by running out of time. Function?
+
+//How can I create the end of quiz page to include an input form to store the results on the scores page?
+-This can likely be achieved by storing the .value from the input field into local storage upon submitting, making the scores persistent. 
+
+//How can I create a function to clear out the scores page?
+
+//How can I use a button to "go back" to the start of the quiz?
+
+
+
+
+
+
+//NOTES/OBSERVATIONS
+-It appears the main title on the start page, the question titles, the All done! message, and Highscores title, all share the same formatting. 
+-All the buttons share the same formatting. 
+
+-if (answer) {
+  return nextQuestion;
+} else {
+  return nextQuestion && timer--;
+}
