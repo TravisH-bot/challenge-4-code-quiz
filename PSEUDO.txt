@@ -5,7 +5,7 @@ We want a main page with a Title, quiz description, a button to start the quiz, 
 When we press the button, we want the title, quiz description, and start quiz button to disappear and the first quiz question to display. 
 
 //How do I get the initial information to disappear/be replaced by the first question? 
--Could this be done with DOM manipulation and have each section of questions be shown or hidden based on the data-set? 
+-Could this be done with DOM manipulation and have each section of questions be shown or hidden based on the data-set? Unit4 Act 19 & 20
 
 //How can I go about selecting an answer, correct or incorrect, and knowing which is which? 
 -This can likely be done using an array of objects, creating an if statement that: 
@@ -69,3 +69,37 @@ An All done! message, the total score achieved, an input form, and a submit butt
 } else {
   return nextQuestion && timer--;
 }
+
+if (all questions answered || timer === 0) {
+  return resultsContainer;
+}
+
+when the start button is pressed, set the current "slide" to clear and present the first "question slide", then the next "question slide" once an answer is selected and so forth. 
+
+*** Iterate over an array to populate the questions***
+
+submit buttons? 
+
+create a variable to keep track of our question index. set a var when they enter. set index to a variable to 0. ++ it to move to each question. 
+when start, show first question with choices. choices key
+
+if (questionIndex === 0) {
+  
+}
+
+use a forloop over the choices array. 
+
+main logic
+
+click start, display title and choices. Index starting value 
+
+js array into local storage into via JSON stringify
+
+make a hide class: display none. Give the results and quiz the hide property immediately. 
+add to sections that should hide on load, use js to show
+
+the scores page will store the scores in local storage - have different js page render data to the list
+
+click event would start the next iteration 
+
+divs: if ()

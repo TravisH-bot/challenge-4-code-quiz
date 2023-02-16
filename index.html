@@ -14,16 +14,23 @@
         <h class="time"></h2>
       </nav>
     </header>
-    <div id="main">
+  <main>
+    <div id="start">
       <h1>Coding Quiz Challenge</h1>
       <p>Try to answer the following code related questions within the time limit. Keep in mind that incorrect answers will penalize your score time by ten seconds!</p>
-      <button class="btn-primary">Start Quiz</button>
+      <button id="startBtn" class="btn-primary">Start Quiz</button>
     </div>
-    <div id="question-one">
-      <h1>Coding Quiz Challenge</h1>
-      <p>Try to answer the following code related questions within the time limit. Keep in mind that incorrect answers will penalize your score time by ten seconds!</p>
-      <button class="btn-primary">Start Quiz</button>
+    <div id="quiz" class="hide">
+      <h1 id="question-title"></h1>
+      <div id="answer-buttons" class="choicesContainer">
+      <button class="btn">test</button>
+      <button class="btn">test</button>
+      <button class="btn">test</button>
+      <button class="btn">test</button>
+      </div>
     </div>
+    <div id="results" class="hide"></div>
+    </main>
     <script src="./assets/js/script.js"></script>
   </body>
 </html>
