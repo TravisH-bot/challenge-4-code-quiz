@@ -61,7 +61,7 @@ An All done! message, the total score achieved, an input form, and a submit butt
 
 
 //NOTES/OBSERVATIONS
--It appears the main title on the start page, the question titles, the All done! message, and Highscores title, all share the same formatting. 
+-It appears the main title on the start page, the question titles, the All done! message, and High Scores title, all share the same formatting. 
 -All the buttons share the same formatting. 
 
 -if (answer) {
@@ -87,7 +87,7 @@ if (questionIndex === 0) {
   
 }
 
-use a forloop over the choices array. 
+use a for loop over the choices array. 
 
 main logic
 
@@ -101,5 +101,3 @@ add to sections that should hide on load, use js to show
 the scores page will store the scores in local storage - have different js page render data to the list
 
 click event would start the next iteration 
-
-divs: if ()
