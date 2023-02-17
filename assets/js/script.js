@@ -1,3 +1,5 @@
+// VARIABLE DECLARATIONS
+//Quiz questions to be displayed to the user
 var questions = [
   {
     question: "Commonly used data types DO Not Include?",
@@ -33,8 +35,7 @@ var questions = [
     answer: "all of the above",
   },
 ];
-
-// VARIABLE DECLARATIONS
+//Various elements from the HTML page being targeted for JS functionality
 var startContainer = document.getElementById("start");
 var quizContainer = document.getElementById("quiz");
 var startButton = document.getElementById("startBtn");
@@ -42,7 +43,6 @@ var endResults = document.getElementById("results");
 var questionTitle = document.getElementById("question");
 var userScore = 0;
 var highScores = document.getElementById("scores");
-// var answerButtons = document.getElementById("answer-buttons");
 var answerButtons = document.getElementById("btn");
 var choices = Array.from(document.getElementsByClassName("btn"));
 var currentQuestion = 0;
@@ -51,8 +51,10 @@ var availableQuestions = [];
 var questionCounter;
 var maxQuestions = 4;
 
+//The beginning of the quiz, pressing the start button to kick off the process.
 startButton.addEventListener("click", startGame);
 
+//The startGame function, initiated by the button click and displaying the questions
 function startGame() {
   startContainer.classList.add("hide");
   quizContainer.classList.remove("hide");
@@ -62,6 +64,7 @@ function startGame() {
   setTime();
 }
 
+//The displayQuestion function iterates over an array to pass the question title and the questions over the HTML elements (h1 and buttons)
 displayQuestion = () => {
   if (availableQuestions.length === 0 || questionCounter >= maxQuestions) {
     return window.location.assign("./scores.html");
@@ -73,7 +76,7 @@ displayQuestion = () => {
     var number = choice.dataset["number"];
     choice.textContent = currentQuestion["choice" + number];
   });
-  // availableQuestions.splice(currentQuestion, 1);
+
   acceptingAnswers = true;
   console.log(acceptingAnswers);
 };
@@ -92,7 +95,7 @@ choices.forEach((choice) => {
 });
 
 //TIMER STARTER CODE
-
+//Once the start button is pressed, the timer will begin, informing the user of the remaining time.
 var timeEl = document.querySelector(".time");
 var secondsLeft = 75;
 var setToZero = 0;
@@ -107,7 +110,6 @@ function setTime() {
       if (secondsLeft <= 0) {
         // Stops execution of action at set interval
         clearInterval(setToZero);
-        // Calls function to display end quiz page
       }
     }, 1000);
   }
